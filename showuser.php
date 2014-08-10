@@ -5,7 +5,7 @@ function connectandadd(){
 mysql_connect('localhost','root','1234');
 mysql_select_db('samplereq');
 
-$query="Select * from sample where id ='".$_POST['Alias']."'";
+$query="Select * from user where id ='".$_POST['Alias']."'";
 
 $result=mysql_query($query);
 

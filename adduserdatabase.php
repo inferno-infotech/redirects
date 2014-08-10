@@ -7,11 +7,11 @@ function connectandadd(){
 mysql_connect('localhost','root','1234');
 mysql_select_db('samplereq');
 
-$query="insert into sample(Alias,fname,lname,email,phone,linkid,note,status)values('".$_POST['alias']."','".$_POST['fname']."','".$_POST['lname']."','".$_POST['email']."','".$_POST['phone']."','".$_POST['link']."','".$_POST['note']."','".$_POST['status']."')";
+$query="insert into user(Alias,fname,lname,email,phone,linkid,note,status)values('".$_POST['alias']."','".$_POST['fname']."','".$_POST['lname']."','".$_POST['email']."','".$_POST['phone']."','".$_POST['link']."','".$_POST['note']."','".$_POST['status']."')";
 mysql_query($query);
 $last_id = mysql_insert_id();
 
-$query1="select * from sample where id=".$last_id;
+$query1="select * from user where id=".$last_id;
 $result=mysql_query($query1);
 while ($row = mysql_fetch_array($result, MYSQL_ASSOC))
 {

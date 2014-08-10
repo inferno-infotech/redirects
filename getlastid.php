@@ -7,7 +7,7 @@ function connectandadd(){
 mysql_connect('localhost','root','1234');
 mysql_select_db('samplereq');
 
-$query="Select * from sample";
+$query="Select * from user";
 $result=mysql_query($query);
 
  

@@ -7,13 +7,13 @@ function connectandadd(){
 mysql_connect('localhost','root','1234');
 mysql_select_db('samplereq');
 
-$query="insert into sample2(idbutton,day,start_time,end_time,message,url)values('".$_POST['idbutton']."','".$_POST['day']."','".$_POST['starttime']."','".$_POST['endtime']."','".$_POST['message']."','".$_POST['url']."')";
+$query="insert into schedule(button_id,day,start_time,end_time,message,url)values('".$_POST['idbutton']."','".$_POST['day']."','".$_POST['starttime']."','".$_POST['endtime']."','".$_POST['message']."','".$_POST['url']."')";
 
 mysql_query($query);
 
 $last_id = mysql_insert_id();
 //
-$query1="select * from sample2 where id=".$last_id;
+$query1="select * from schedule where id=".$last_id;
 
 $result=mysql_query($query1);
 while ($row = mysql_fetch_array($result, MYSQL_ASSOC))

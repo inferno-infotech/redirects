@@ -9,7 +9,7 @@ mysql_select_db('samplereq');
 
 
 
-$query1="Delete from sample1 where id1=".$_POST['id1']."and id=".$_POST['id2'];
+$query1="Delete from buttons where user_id=".$_POST['id1']."and id=".$_POST['id2'];
 echo $query1;
 $result=mysql_query($query1);
 //while ($row = mysql_fetch_array($result, MYSQL_ASSOC))

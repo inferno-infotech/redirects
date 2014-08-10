@@ -5,11 +5,11 @@ function connectandadd(){
 mysql_connect('localhost','root','1234');
 mysql_select_db('samplereq');
 
-$query="Update sample set Alias='".$_POST['alias']."',fname='".$_POST['fname']."',lname='".$_POST['lname']."',email='".$_POST['email']."',phone='".$_POST['phone']."',linkid='".$_POST['linkid']."',note='".$_POST['note']."',status='".$_POST['status']."' where id =".$_POST['id'];
+$query="Update user set Alias='".$_POST['alias']."',fname='".$_POST['fname']."',lname='".$_POST['lname']."',email='".$_POST['email']."',phone='".$_POST['phone']."',linkid='".$_POST['linkid']."',note='".$_POST['note']."',status='".$_POST['status']."' where id =".$_POST['id'];
 $result=mysql_query($query);
 
 
-$query1="Select * from sample where id=".$_POST['id'];
+$query1="Select * from user where id=".$_POST['id'];
 $result=mysql_query($query1);
 while ($row = mysql_fetch_array($result, MYSQL_ASSOC))
 {

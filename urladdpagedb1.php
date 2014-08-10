@@ -9,7 +9,7 @@ mysql_select_db('samplereq');
 
 
 
-$query1="select * from sample3 where iduser=".$_POST['iduser']." and idbutton=".$_POST['idbutton'];
+$query1="select * from url where iduser=".$_POST['iduser']." and idbutton=".$_POST['idbutton'];
 
 $result=mysql_query($query1);
 while ($row = mysql_fetch_array($result, MYSQL_ASSOC))

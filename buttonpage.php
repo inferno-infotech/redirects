@@ -133,7 +133,7 @@ $("#addurltext").val("");
 }
 function buttondelete(value5)
 {
-   $.post("http://localhost/samplereq/deletebutton.php",{'id1':gloval,'id':value5},function(data){
+   $.post("http://loddcalhost/samplereq/buttondelete.php",{'id1':gloval,'id2':value5},function(data){
   
 });  
     

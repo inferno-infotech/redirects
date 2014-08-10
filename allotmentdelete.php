@@ -7,7 +7,7 @@ function connectandadd(){
 mysql_connect('localhost','root','1234');
 mysql_select_db('samplereq');
 
-$query="Delete from sample2 where id=".$_POST['id'];
+$query="Delete from schedule where id=".$_POST['id'];
 if(mysql_query($query))
 {echo 'success';}
 
